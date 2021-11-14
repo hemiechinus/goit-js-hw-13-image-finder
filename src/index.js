@@ -1,11 +1,12 @@
-import apiService from './js/apiService.js';
-import template from './temp/templates.hbs';
+import './sass/main.scss';
+import apiService from './js/apiService.js'
+import template from './template/template.hbs'
+import debounce from 'debounce'
 
 const form = document.querySelector('.form-box');
 const gallery = document.querySelector('.gallery-list')
 const btn = document.querySelector('.btn')
 const element = document.querySelector('.gallery-box');
-
 
 markupForm()
 const input = document.querySelector('[name="query"]')
@@ -72,3 +73,4 @@ function markupForm() {
     
     form.insertAdjacentHTML('beforeend', markup)
 }
+

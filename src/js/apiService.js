@@ -1,8 +1,8 @@
 export default class apiService {
     constructor() {
         this.BASE_URL = "https://pixabay.com/";
-        this.KEY = 'key=24313897-08fadb9fd8bbd27a38b998116'
-       this.searchQuery = "";
+        this.KEY = '&key=24313897-08fadb9fd8bbd27a38b998116'
+        this.searchQuery = "";
         this.page = 1;
     }
      makeFetch() {
@@ -25,4 +25,7 @@ export default class apiService {
         this.searchQuery = newQuery
     }
 }
+
+
+
 
