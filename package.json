@@ -30,6 +30,5 @@
   "dependencies": {
     "debounce": "^1.2.1",
     "gh-pages": "^3.2.3"
-
   }
 }
