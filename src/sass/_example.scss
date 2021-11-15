@@ -7,12 +7,13 @@ body {
 .search-form {
   position: fixed;
   right: 50%;
+  top: 2%;
   transform: translate(50%);
   opacity: 0.6;
 
   .input {
     width: 300px;
-    height: 40px;
+    height: 20px;
     border-radius: 10px;
     padding-left: 10px;
     border-color: rgb(143, 127, 127);
@@ -49,11 +50,16 @@ body {
 .stats {
   display: flex;
   justify-content: space-between;
+  color: rgb(236, 223, 223);
+  font-size: 15px;
 }
 .gallery-list {
+  margin-top: 50px  ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  list-style-type: none;
-  color: rgb(236, 223, 223);
+  list-style-type: none;  
+}
+.material-icons{
+  font-size: 15px;
 }
