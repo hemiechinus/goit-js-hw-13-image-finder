@@ -8,9 +8,11 @@ const gallery = document.querySelector('.gallery-list')
 const btn = document.querySelector('.btn')
 const element = document.querySelector('.gallery-box');
 
+form.addEventListener('submit', searchImages);
+
 markupForm()
 const input = document.querySelector('[name="query"]')
-input.addEventListener('input', debounce(searchImages, 1000))
+input.addEventListener('click', debounce(searchImages, 1000))
 btn.addEventListener('click', loadMoreImage)
 
 const newApiService = new apiService()
@@ -24,7 +26,7 @@ function searchImages(evt) {
     
     newApiService.query = evt.target.value.trim()
     newApiService.makeFetch().then(data => {
-        if (data.total !== 0) {
+        if (data.total !== '0') {
             data.hits.map((elem) => {
                 const markup = template({ elem })
                 gallery.insertAdjacentHTML('beforeend', markup)

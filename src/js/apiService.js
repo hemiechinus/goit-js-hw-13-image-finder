@@ -24,6 +24,7 @@ export default class apiService {
     set query(newQuery) {
         this.searchQuery = newQuery
     }
+    
 }
 
 
