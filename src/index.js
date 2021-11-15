@@ -16,6 +16,7 @@ btn.addEventListener('click', loadMoreImage)
 const newApiService = new apiService()
 btn.classList.add('visibility')
 
+
 function searchImages(evt) {
     evt.preventDefault()
    gallery.innerHTML = ""
@@ -72,4 +73,5 @@ function markupForm() {
     
     form.insertAdjacentHTML('beforeend', markup)
 }
+
 
