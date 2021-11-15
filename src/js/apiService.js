@@ -5,9 +5,9 @@ export default class apiService {
         this.searchQuery = "";
         this.page = 1;
     }
-     makeFetch() {
-    return fetch(`${this.BASE_URL}api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&${this.KEY}`)
-        .then(response => {
+    makeFetch() {
+        return fetch(`${this.BASE_URL}api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&${this.KEY}`)
+            .then(response => {
         if (response.status === 200) {
         
           return response.json()
@@ -25,7 +25,6 @@ export default class apiService {
         this.searchQuery = newQuery
     }
 }
-
 
 
 

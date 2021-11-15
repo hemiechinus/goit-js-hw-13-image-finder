@@ -29,7 +29,6 @@ function searchImages(evt) {
                 gallery.insertAdjacentHTML('beforeend', markup)
                 btn.classList.remove('visibility')
                 // evt.target.value = ""
-                
             })
         }
         else {
