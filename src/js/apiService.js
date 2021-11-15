@@ -17,7 +17,7 @@ export default class apiService {
         }
     })
     }
-
+    
     get query() {
         this.searchQuery
     }

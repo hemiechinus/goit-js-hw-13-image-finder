@@ -18,8 +18,8 @@ btn.classList.add('visibility')
 
 function searchImages(evt) {
     evt.preventDefault()
-    gallery.innerHTML = ""
-    newApiService.page = 1
+   gallery.innerHTML = ""
+   newApiService.page = 1
     
     newApiService.query = evt.target.value.trim()
     newApiService.makeFetch().then(data => {
@@ -27,18 +27,17 @@ function searchImages(evt) {
             data.hits.map((elem) => {
                 const markup = template({ elem })
                 gallery.insertAdjacentHTML('beforeend', markup)
-                btn.classList.remove('visibility')
-                evt.target.value = ""
+                // btn.classList.remove('visibility')
+                // evt.target.value = ""
             })
         }
         else {
-            btn.classList.add('visibility')
-            alert('Введіть коректне значення!')
+           btn.classList.add('visibility')
+           alert('Введіть коректне значення!')
         }
     })
     .catch(error => console.log(error))
 }
-
 function loadMoreImage() {
     changePage()
     newApiService.makeFetch().then(data => {
