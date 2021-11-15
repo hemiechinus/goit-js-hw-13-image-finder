@@ -27,8 +27,9 @@ function searchImages(evt) {
             data.hits.map((elem) => {
                 const markup = template({ elem })
                 gallery.insertAdjacentHTML('beforeend', markup)
-                // btn.classList.remove('visibility')
+                btn.classList.remove('visibility')
                 // evt.target.value = ""
+                
             })
         }
         else {
